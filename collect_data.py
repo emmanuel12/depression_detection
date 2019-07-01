@@ -22,7 +22,7 @@ def collect_data(limit=10000):
 
     date = dt.datatime.now().date()
     dbcursor.execute('''CREATE TABLE mentalhealth (mentalhealth%s)'''%date)
-    dbcursor.executemany('INSERT INTO mentalhealth VALUES (mentalhealth%s)'%date, posts_text)
+    dbcursor.executemany('INSERT INTO mentalhealth%s VALUES (?)'%date, posts_text)
     dbcursor.commit()
 
 
