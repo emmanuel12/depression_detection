@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import sqlite3
-import datatime as dt
+import datetime as dt
 import time
 import praw
 
