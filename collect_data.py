@@ -36,9 +36,11 @@ def timed():
             collect_data()
 
         else:
+            dbcursor.close()
             break
 
         time.sleep(day)
+
 
 
 if __name__ == '__main__':
