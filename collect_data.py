@@ -18,9 +18,9 @@ def collect_data(limit=10000):
     posts_text = []
 
     for posts in reddit_posts.top(limit=limit):
-        posts_text.append((posts.title,))
+        posts_text.append((posts.title\,))
 
-    date = dt.datatime.now().date()
+    date = dt.datetime.now().date()
     dbcursor.execute('''CREATE TABLE mentalhealth (mentalhealth%s)'''%date)
     dbcursor.executemany('INSERT INTO mentalhealth%s VALUES (?)'%date, posts_text)
     dbcursor.commit()
