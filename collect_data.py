@@ -24,6 +24,7 @@ def collect_data(limit=10000):
     dbcursor.execute('''CREATE TABLE mentalhealth (text mentalhealth%s)'''%date)
     dbcursor.executemany('INSERT INTO mentalhealth%s VALUES (?)'%date, posts_text)
     dbcursor.commit()
+    print("test')
 
 
 
