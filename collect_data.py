@@ -13,7 +13,7 @@ dbcursor = dbconnect.cursor()
 
 def collect_data(limit=10):
     reddit = praw.Reddit(client_id='8FJ4EPZ6l-4Gtg', client_secret='jp9oweovOFZkMavGmOJCyP03Umw', user_agent='Emmanuel Nsanga')
-    reddit_posts = reddit.subreddit('depression_help')
+    reddit_posts = reddit.subreddit('depression')
 
     posts_text = []
 
