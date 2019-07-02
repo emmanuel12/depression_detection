@@ -11,7 +11,7 @@ day = 24*3600
 dbconnect = sqlite3.connect('mentalhealth.db')
 dbcursor = dbconnect.cursor()
 
-def collect_data(limit=10):
+def collect_data(limit=10000):
     reddit = praw.Reddit(client_id='8FJ4EPZ6l-4Gtg', client_secret='jp9oweovOFZkMavGmOJCyP03Umw', user_agent='Emmanuel Nsanga')
     reddit_posts = reddit.subreddit('depression')
 
