@@ -21,7 +21,8 @@ def collect_data(limit=10000):
         posts_text.append((posts.title,))
 
     date = dt.datetime.now().date()
-    strdate = str(date).split('-')[0]+str(date).split('-')[1]
+    strdate = str(date).split('-')[0]+str(date).split('-')[2]
+    print(strdate)
     dbcursor.execute('''CREATE TABLE mentalhealth%s (posts)'''%strdate)
     dbcursor.executemany('INSERT INTO mentalhealth%s VALUES (?)'%strdate, posts_text)
     dbconnect.commit()
